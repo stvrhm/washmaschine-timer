@@ -1,4 +1,4 @@
-# Washmachine Timer Agent Guide
+# Washing machine Timer Agent Guide
 
 This app was scaffolded with `remix new`. Use these conventions when continuing to build it out.
 

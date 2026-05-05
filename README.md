@@ -1,4 +1,4 @@
-# Washmachine Timer
+# Washing Machine Timer
 
 A minimal Remix application starter with a home page and an auth page.
 

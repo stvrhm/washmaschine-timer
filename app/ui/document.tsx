@@ -1,13 +1,13 @@
-import type { RemixNode } from 'remix/ui'
+import type { RemixNode } from "remix/ui";
 
-import { routes } from '../routes.ts'
+import { routes } from "../routes.ts";
 
 export interface DocumentProps {
-  children?: RemixNode
-  title?: string
+  children?: RemixNode;
+  title?: string;
 }
 
-const DEFAULT_TITLE = decodeURIComponent('Washmachine%20Timer')
+const DEFAULT_TITLE = decodeURIComponent("Washing%20Machine%20Timer");
 
 export function Document() {
   return ({ title = DEFAULT_TITLE, children }: DocumentProps) => (
@@ -19,8 +19,11 @@ export function Document() {
       </head>
       <body>
         {children}
-        <script type="module" src={routes.assets.href({ path: 'app/assets/entry.ts' })}></script>
+        <script
+          type="module"
+          src={routes.assets.href({ path: "app/assets/entry.ts" })}
+        ></script>
       </body>
     </html>
-  )
+  );
 }
