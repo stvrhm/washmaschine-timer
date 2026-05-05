@@ -1,8 +1,7 @@
 # syntax = docker/dockerfile:1
 
-# Adjust NODE_VERSION as desired
-ARG NODE_VERSION=24.3.0
-FROM node:${NODE_VERSION}-slim AS base
+# uWebSockets.js (Remix node-serve) only supports Node 20, 22, 24, and 25 on glibc Linux — use bookworm-slim, not Alpine.
+FROM node:24-bookworm-slim AS base
 
 LABEL fly_launch_runtime="Remix"
 
