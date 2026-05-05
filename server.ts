@@ -3,6 +3,7 @@ import { serve } from 'remix/node-serve'
 import { router } from './app/router.ts'
 
 const port = process.env.PORT ? Number.parseInt(process.env.PORT, 10) : 44100
+const listenHost = process.env.HOST ?? '0.0.0.0'
 
 const server = serve(
   async (request) => {
@@ -15,11 +16,12 @@ const server = serve(
   },
   {
     port,
+    listenHost,
   },
 )
 
 await server.ready
-console.log(`Server listening on http://localhost:${server.port}`)
+console.log(`Server listening on http://${listenHost}:${server.port}`)
 
 let shuttingDown = false
 
