@@ -2,7 +2,7 @@ import { serve } from 'remix/node-serve'
 
 import { router } from './app/router.ts'
 
-const port = process.env.PORT ? Number.parseInt(process.env.PORT, 10) : 44100
+const port = process.env.PORT ? Number.parseInt(process.env.PORT, 10) : 3000
 const listenHost = process.env.HOST ?? '0.0.0.0'
 
 const server = serve(
