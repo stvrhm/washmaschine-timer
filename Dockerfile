@@ -2,7 +2,7 @@
 
 # uWebSockets.js (Remix node-serve) needs a supported Node version on glibc Linux.
 # Use Debian Trixie for glibc >= 2.38, which its ARM64 native binary requires.
-FROM node:24-trixie-slim AS base
+FROM node:24.22.1-trixie-slim AS base
 
 LABEL fly_launch_runtime="Remix"
 
